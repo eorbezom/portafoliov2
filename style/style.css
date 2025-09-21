@@ -5,65 +5,259 @@
     box-sizing: border-box;
 
 }
+/*
+todo el contenido de la pagina body 
+*/
+body{ 
+    background: linear-gradient(
+        to top,
+         rgba(26, 24, 24, 0.3),
+         rgba(26, 22, 22, 0.3)),
+    url(/img/bodddy.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+    font-family: 'Merriweather', serif;    
+    color: #222; /* Texto oscuro */
+    display: flex;
+    flex-direction: column; 
+}
+/*
+todo el baner de la info 
+*/
 
-.baner{
-    background: linear-gradient(to top, rgba(26, 24, 24, 0.8), rgba(26, 22, 22, 0.5)),
+
+.baner-content {
+    background: linear-gradient(
+        to top,
+         rgba(26, 24, 24, 0.95),
+         rgba(26, 22, 22, 0.5)),
     url(/img/fondo-nav.jpg);
     background-size: cover;
-    background-position: center;
-    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.baner{      
+    min-height: 70vh;
     color: white;
     display: flex;
     align-items: center;  
     justify-content: center;
-    gap: 20px;
-    
+    gap: 20px;    
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px;
+    margin: o auto;
 }
-
-.info{
-    padding: 40px 20px;   
+.info{    
+     
     background: linear-gradient(
         to right,
         rgba(0, 0, 0, 0.88) 10%,   /* izquierda opaco */
         rgba(0, 0, 0, 0.02) 50%  /* derecha casi transparente */
         
     );
-    max-width: 850px;
-    margin: 0 20px;    
-    text-align: center;
+            
+    text-align: left;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     border-left: 5px solid #404d43;     
-    height: 650px;
+    height: 31vh;
+    margin: 0;
+    
 
 }
 .info h1{
-    font-family: 'Merriweather', cursive;
-    font-size: 98px;
-    margin-bottom: 20px;    
+    font-family: 'Quintessential', sans-serif;
+    font-size: clamp(2rem, 6vw, 4rem);
+    margin-bottom: 20px;      
 }
 .info h2{
-    font-family: 'Merriweather', sans-serif;
-    font-size: 50px;
-    margin: 45px;    
+    font-family: 'Times New Roman', sans-serif;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin: 25px;
 }
 .info h3{
-    font-family: 'Times New Roman', sans-serif;
-    font-size: 45px;   
+    font-family: 'Quintessential', sans-serif;
+    font-size: clamp(1.2rem, 3vw, 2rem);  
 }
 .info h1,
 .info h2,
 .info h3{
-    text-align: left;  
+    text-align: left;     
+}
 
+.foto{   
+    height: auto;
+    object-fit: cover;
+    border-radius: 1%;
+}
+
+/*barra navegador */
+.navbar {
+  /* Fondo con degradado blanco semitransparente */
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15) 0%,   
+      rgba(255, 255, 255, 0.05) 100%  
+    ),
+    rgba(24, 18, 18, 0.85); 
+
+  padding: 10px 20px;
+  text-align: center;
+  justify-content: center;
+  display: flex; 
+  border-top: 2px solid rgba(0, 0, 0, 0.5);  
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+  
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;    
+    padding: 0;
+    margin: 0;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: rgb(13, 238, 5);
+    font-size: 0.99vw;
+    margin: 25px;
+}
+.navbar ul li a:hover {
+    color: white; /* Color al pasar el cursor */     
+    text-shadow: 0 0 5px rgba(13, 238, 5, 0.8),
+               0 0 10px rgba(13, 238, 5, 0.6),
+               0 0 15px rgba(13, 238, 5, 0.4);
+}
+
+/*
+contenido sobre mi
+*/
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: transparent; /* Fondo blanco semitransparente */
+    border-radius: 8px;    
+}
+
+h1{
+    font-size: 10.9rem;
+    margin-bottom: 20px;
+    color: white;
+    font-family: 'Quintessential', sans-serif;
+    text-align: center;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+     
+}
+h2{
+    font-size: 5.5rem;
+    margin-bottom: 20px;
+    color: white;
+    font-family: 'Quintessential', sans-serif;
+    text-align: center;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+p{
+    font-size: 2.6rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: white;
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+    transition: transform 0.3s ease, text-shadow 0.3s ease; 
+    
+}
+ul{
+    font-size: 2.6rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: white;    
+    font-family: 'Times New Roman', Times, serif;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
     
 }
 
-.foto{
-    height: auto;    
-    margin: 0 20px;
+.container h1:hover, .container h2:hover, .container p:hover, .container ul:hover {
+    transform: scale(1.12); 
+    text-shadow:         
+        2px 2px 10px rgba(0,0,0,1),
+        4px 4px 15px rgba(0,0,0,1),
+        6px 6px 25px rgba(0,0,0,1),
+        8px 8px 35px rgba(0,0,0,1),
+        0 0 25px rgba(0,0,0,1),
+        0 0 40px rgba(0,0,0,1),
+        0 0 60px rgba(0,0,0,0.95),
+        0 0 80px rgba(0,0,0,0.95),
+        0 0 100px rgba(0,0,0,0.9),
+        0 0 120px rgba(0,0,0,0.85);              
+                   
 }
+
+
 /*
 Responsive
-
 */
+/* --- Solo cuando el viewport baje de 2026px --- */
+@media (max-width: 2026px) {
+  
+  .baner {
+    justify-content: center;
+  }
+
+  /* hacer que la caja de texto se reduzca proporcionalmente */
+  .info {
+    flex: 0 1 450px;   
+    max-width: 950px;  
+    padding: 24px;     
+    height: auto;    
+  }
+
+  /* hacer que la caja de la foto se reduzca proporcionalmente */
+  .foto {
+    flex: 0 1 320px;   
+    max-width: 380px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .foto img {
+    width: 620px;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+}
+@media (max-width: 1261px) {
+  .baner {
+    flex-direction: column;  
+    text-align: center;
+    text-align: center;
+  } 
+
+  .foto {
+    order: -1; /*orden de la imagen*/
+    width: 85%;  
+    justify-content: center;
+    display: flex;      
+  }
+
+  .foto img {
+    width: 100%;            
+    height: auto;
+    object-fit: cover;           
+  }
+  .info{
+    width: 90%;
+    max-width: 500px
+  }  
+  
+}
