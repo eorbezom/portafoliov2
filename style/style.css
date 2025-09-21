@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Quintessential&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.baner{
+    background: linear-gradient(to top, rgba(26, 24, 24, 0.8), rgba(26, 22, 22, 0.5)),
+    url(/img/fondo-nav.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.info{
+    padding: 40px 20px;   
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.88) 10%,   /* izquierda opaco */
+        rgba(0, 0, 0, 0.02) 50%  /* derecha casi transparente */
+        
+    );
+    max-width: 850px;
+    margin: 0 20px;    
+    text-align: center;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-left: 5px solid #404d43;     
+    height: 650px;
+
+}
+.info h1{
+    font-family: 'Merriweather', cursive;
+    font-size: 98px;
+    margin-bottom: 20px;    
+}
+.info h2{
+    font-family: 'Merriweather', sans-serif;
+    font-size: 50px;
+    margin: 45px;    
+}
+.info h3{
+    font-family: 'Times New Roman', sans-serif;
+    font-size: 45px;   
+}
+.info h1,
+.info h2,
+.info h3{
+    text-align: left;  
+
+    
+}
+
+.foto{
+    height: auto;    
+    margin: 0 20px;
+}
+/*
+Responsive
+
+*/
