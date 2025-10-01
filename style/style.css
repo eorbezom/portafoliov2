@@ -46,34 +46,41 @@ todo el baner de la info
     display: flex;
     align-items: center;  
     justify-content: center;
-    gap: 20px;    
+    gap: 40px;    
     flex-wrap: wrap;
     width: 100%;
     padding: 20px;
     margin: o auto;
 }
-.info{    
-     
-    background: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.88) 10%,   /* izquierda opaco */
-        rgba(0, 0, 0, 0.02) 50%  /* derecha casi transparente */
-        
-    );
-            
-    text-align: left;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-left: 5px solid #404d43;     
-    height: 31vh;
-    margin: 0;
-    
+.info{   
+    position: relative;
+    background: transparent;
+    padding-left: 30px;
+    margin: o;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 500px;
 
 }
+.info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px; /* Ancho de la línea */
+    height: 100%; /* Altura completa del contenedor */
+    background-color: #0cf104; /* Color de la línea */
+    border-radius: 4px; /* Bordes redondeados (opcional) */
+    
+}
+
+
 .info h1{
     font-family: 'Quintessential', sans-serif;
     font-size: clamp(2rem, 6vw, 4rem);
-    margin-bottom: 20px;      
+    margin-bottom: 20px;  
+    margin-left: 40px;    
 }
 .info h2{
     font-family: 'Times New Roman', sans-serif;
@@ -83,11 +90,25 @@ todo el baner de la info
 .info h3{
     font-family: 'Quintessential', sans-serif;
     font-size: clamp(1.2rem, 3vw, 2rem);  
+    margin-left: 40px; 
+    margin-top: 15px;
 }
 .info h1,
 .info h2,
 .info h3{
-    text-align: left;     
+    text-align: left;  
+    transform: scale(1.1);
+    text-shadow:         
+        2px 2px 10px rgba(0,0,0,1),
+        4px 4px 15px rgba(0,0,0,1),
+        6px 6px 25px rgba(0,0,0,1),
+        8px 8px 35px rgba(0,0,0,1),
+        0 0 25px rgba(0,0,0,1),
+        0 0 40px rgba(0,0,0,1),
+        0 0 60px rgba(0,0,0,0.95),
+        0 0 80px rgba(0,0,0,0.95),
+        0 0 100px rgba(0,0,0,0.9),
+        0 0 120px rgba(0,0,0,0.85);   
 }
 
 .foto{   
@@ -104,7 +125,7 @@ todo el baner de la info
       rgba(255, 255, 255, 0.15) 0%,   
       rgba(255, 255, 255, 0.05) 100%  
     ),
-    rgba(24, 18, 18, 0.85); 
+    rgba(36, 35, 35, 0.85); 
 
   padding: 10px 20px;
   text-align: center;
@@ -136,20 +157,48 @@ todo el baner de la info
                0 0 15px rgba(13, 238, 5, 0.4);
 }
 
+
+
+/*
+boton descarga
+*/
+
+.descarga{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;     
+    margin-bottom: -95px;
+}
+.descarga .btn{    
+    font-size: 2rem;
+    padding: 12px 30px;    
+    border-radius: 18px;
+    background-color: #28a745; 
+    color: white; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 4);
+}
+
+.descarga button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 18px rgba(255,255,255,0.3);
+}
 /*
 contenido sobre mi
 */
 
-.container{
-    max-width: 1200px;
+.sobre-mi{
+    width: 50%;
     margin: 0 auto;
     padding: 20px;
-    background: transparent; /* Fondo blanco semitransparente */
+    background: transparent; 
     border-radius: 8px;    
 }
 
 h1{
-    font-size: 10.9rem;
+    font-size: 5rem;
     margin-bottom: 20px;
     color: white;
     font-family: 'Quintessential', sans-serif;
@@ -158,7 +207,7 @@ h1{
      
 }
 h2{
-    font-size: 5.5rem;
+    font-size: 4rem;
     margin-bottom: 20px;
     color: white;
     font-family: 'Quintessential', sans-serif;
@@ -166,7 +215,7 @@ h2{
     transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 p{
-    font-size: 2.6rem;
+    font-size: 2rem;
     line-height: 1.6;
     margin-bottom: 20px;
     color: white;
@@ -176,7 +225,7 @@ p{
     
 }
 ul{
-    font-size: 2.6rem;
+    font-size: 2rem;
     line-height: 1.6;
     margin-bottom: 20px;
     color: white;    
@@ -185,7 +234,7 @@ ul{
     
 }
 
-.container h1:hover, .container h2:hover, .container p:hover, .container ul:hover {
+.sobre-mi h1:hover, .sobre-mi h2:hover, .sobre-mi p:hover, .sobre-mi ul:hover {
     transform: scale(1.12); 
     text-shadow:         
         2px 2px 10px rgba(0,0,0,1),
@@ -200,12 +249,190 @@ ul{
         0 0 120px rgba(0,0,0,0.85);              
                    
 }
+/*PROYECTOS*/
+.proyect { 
+    background: radial-gradient(
+        circle,
+        rgba(0, 0, 0, 0.95) 30%,  
+        rgba(0, 0, 0, 0.88) 100%  
+    );   
+    width: 100%;              
+    min-height: 100vh;      
+    padding: 40px 20px;
+    display: flex;    
+    flex-direction: column;
+    align-items: center;       
+      
+}
+
+.proyect h1{
+    font-size: 5rem;
+    margin-bottom: 20px;
+    color: white;
+    font-family: 'Quintessential', sans-serif;
+    text-align: center;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;    
+}
+
+.proyect h1:hover {
+    transform: scale(1.12); 
+    color: black;
+    text-shadow:         
+        2px 2px 10px rgb(255, 255, 255),
+        4px 4px 15px rgba(255, 253, 253, 0.993),
+        6px 6px 25px rgb(255, 255, 255),
+        8px 8px 35px rgb(255, 255, 255);  
+    transition: all 0.3s ease;                   
+}
+.proyect-conteiner{ 
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    margin: 0 auto;
+
+    
+}
+
+
+.proyecto-direct {
+    position: relative;
+    overflow: hidden;    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+
+}
+
+.proyecto-direct img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+    border-radius: 15px;
+}
+
+.proyecto-direct:hover img {
+    transform: scale(1.1);
+    border-radius: 35px; 
+}
+
+.proyecto-direct::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top,
+        rgba(0, 0, 0, 0.7),   
+        rgba(0, 0, 0, 0.2)   
+    );
+    transition: opacity 0.3s ease;
+}
+
+.proyecto-direct h2{
+    position: absolute; 
+    left: 50%;
+    top: 30%;  
+    transform: translateX(-50% );
+    color: white;
+    font-size: 4rem;
+    font-family: 'Quintessential', serif;
+    z-index: 2;
+        
+}
+
+.proyecto-direct .icono {
+    position: absolute;
+    left: 40%;
+    top: 70%;
+    z-index: 2 ;
+    font-size: 1.8rem;
+    display: flex;
+    gap: 15px;
+
+}
+.proyecto-direct .icono a {    
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+
+.proyecto-direct a:hover{
+    transform: scale(1.1);    
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8),
+               0 0 10px rgba(255, 255, 255, 0.6),
+               0 0 15px rgba(255, 255, 255, 0.4);
+}
+.proyecto-direct h2:hover{
+    transform: translateX(-50%) scale(1.1); 
+    transform-origin: center;   
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8),
+               0 0 10px rgba(255, 255, 255, 0.6),
+               0 0 15px rgba(255, 255, 255, 0.4);
+}
+.proyecto-direct:hover::after {
+    opacity: 0.1; 
+}
+
+
+
 
 
 /*
 Responsive
 */
-/* --- Solo cuando el viewport baje de 2026px --- */
+
+@media (max-width: 1012px) {
+    .proyect-conteiner {
+        grid-template-columns: 1fr; /* Solo una columna */
+    }
+
+    .proyecto-direct h2 {
+        font-size: 2.5rem; /* más pequeño para pantallas chicas */
+    }
+
+    .proyecto-direct .icono {
+        font-size: 1.2rem; /* íconos más chicos */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+
+@media (max-width: 431px) {
+    .proyecto-direct img {
+        width: 85%;   /* imagen más pequeña y centrada */
+        margin: 0 auto;
+    }
+
+    .proyecto-direct h2 {
+        font-size: 1.8rem; /* título más pequeño */
+        top: 25%;
+    }
+
+    .proyecto-direct .icono {
+        font-size: 1rem; /* íconos más pequeños */
+        top: 55%;
+        gap: 10px;
+    }
+}
+@media (max-width: 461px) {
+    .descarga button {
+        margin-bottom: -43px;
+        transform: translateY(-50%);
+        font-size: 0.9rem;   /* Opcional: reduce tamaño del texto */
+        padding: 8px 16px;   /* Ajuste opcional del botón */
+    }
+}
+
+
+
 @media (max-width: 2026px) {
   
   .baner {
@@ -260,4 +487,11 @@ Responsive
     max-width: 500px
   }  
   
+}
+
+@media (max-width: 431px) {
+    .sobre-mi h2 {
+        font-size: 2rem; /* todavía más pequeño en celulares */
+        text-align: center; /* opcional, por si quieres centrar */
+    }
 }
