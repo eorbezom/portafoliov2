@@ -119,8 +119,152 @@
                     
                 </div>
             </div>
-            <div class="testimonio"></div>
-            <div class="contacto"></div>
+            <div class="testimonio">  
+                <section id="comentarios" class="seccion-comentarios">
+    <h2>Opiniones de nuestros usuarios</h2>
+
+    <div class="carousel-container">
+      <button class="btn-prev">&#10094;</button>
+
+      <div class="carousel-slide">
+        <div class="comentario">
+          <img src="https://via.placeholder.com/200" alt="Foto 1">
+          <p>“Excelente servicio y atención personalizada.”</p>
+          <h5>María Quispe</h5>
+        </div>
+        <div class="comentario">
+          <img src="https://via.placeholder.com/200" alt="Foto 2">
+          <p>“Muy satisfecho con los resultados.”</p>
+          <h5>Juan Mamani</h5>
+        </div>
+        <div class="comentario">
+          <img src="https://via.placeholder.com/200" alt="Foto 3">
+          <p>“Gran experiencia, lo recomiendo.”</p>
+          <h5>Lucía Fernández</h5>
+        </div>
+        <div class="comentario">
+          <img src="https://via.placeholder.com/200" alt="Foto 3">
+          <p>“Gran experiencia, lo recomiendo.”</p>
+          <h5>cutipa 1</h5>
+        </div>
+        <div class="comentario">
+          <img src="https://via.placeholder.com/200" alt="Foto 3">
+          <p>“Gran experiencia, lo recomiendo.”</p>
+          <h5>cutipa 2</h5>
+        </div>
+        <div class="comentario">
+          <img src="https://via.placeholder.com/200" alt="Foto 3">
+          <p>“Gran experiencia, lo recomiendo.”</p>
+          <h5>cutipa 3</h5>
+        </div>
+        <div class="comentario">
+          <img src="https://via.placeholder.com/200" alt="Foto 3">
+          <p>“Gran experiencia, lo recomiendo.”</p>
+          <h5>cutipa 4</h5>
+        </div>
+        <div class="comentario">
+          <img src="https://via.placeholder.com/200" alt="Foto 3">
+          <p>“Gran experiencia, lo recomiendo.”</p>
+          <h5>cutipa 5</h5>
+        </div>
+        <div class="comentario">
+          <img src="https://via.placeholder.com/200" alt="Foto 3">
+          <p>“Gran experiencia, lo recomiendo.”</p>
+          <h5>cutipa 1</h5>
+        </div>
+        <div class="comentario">
+          <img src="https://via.placeholder.com/200" alt="Foto 4">
+          <p>“Fácil de usar y muy intuitivo.”</p>
+          <h5>Pedro Cutipa</h5>
+        </div>
+        <div class="comentario">
+          <img src="https://via.placeholder.com/200" alt="Foto 5">
+          <p>“Excelente experiencia de usuario.”</p>
+          <h5>Carmen Alpaconsio</h5>
+        </div>
+      </div>
+       <div class="formulario-comentarios">
+      <h3>Deja tu comentario</h3>
+      <form action="https://formspree.io/f/xxxxxxx" method="POST" enctype="multipart/form-data">
+        <div class="grupo-form">
+          <label for="nombre">Nombre completo:</label>
+          <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
+        </div>
+
+        <div class="grupo-form">
+          <label for="correo">Correo electrónico:</label>
+          <input type="email" id="correo" name="correo" required placeholder="Tu correo">
+        </div>
+
+        <div class="grupo-form">
+          <label for="mensaje">Tu comentario:</label>
+          <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Escribe tu comentario..."></textarea>
+        </div>
+
+        <div class="grupo-form">
+          <label for="foto">Sube tu foto (opcional):</label>
+          <input type="file" id="foto" name="foto" accept="image/*">
+        </div>
+
+        <button type="submit" class="btn-enviar">Enviar comentario</button>
+      </form>
+    </div>
+  </section>
+
+
+      <button class="btn-next">&#10095;</button>
+    </div>
+  </section>
+
+             </div>
+            <div class="contacto">
+                <section id="contacto" class="py-5 bg-light">
+                    <div class="container">
+                        <h2 class="text-center mb-4">Contáctame</h2>
+                        <p class="text-center mb-5">
+                          Si deseas comunicarte conmigo para una oportunidad laboral o colaboración, 
+                          completa el siguiente formulario y te responderé a la brevedad.
+                        </p>
+                    
+                        <div class="row justify-content-center">
+                          <div class="col-md-8">
+                            <form action="https://formspree.io/f/xxxxxxx" method="POST">
+                                <!-- Nombre -->
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Nombre completo</label>
+                                        <input type="text" name="name" id="name" class="form-control" placeholder="Ingresa tu nombre" required>
+                                </div>
+                            
+                                <!-- Correo -->
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Correo electrónico</label>
+                                        <input type="email" name="email" id="email" class="form-control" placeholder="ejemplo@correo.com" required>
+                                </div>
+                            
+                                <!-- Asunto -->
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label">Asunto</label>
+                                        <input type="text" name="subject" id="subject" class="form-control" placeholder="Motivo del mensaje">
+                                </div>
+                            
+                                <!-- Mensaje -->
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Mensaje</label>
+                                        <textarea name="message" id="message" class="form-control" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                                </div>
+                            
+                                <!-- Botón -->
+                                <div class="text-center">
+                                  <button type="submit" class="btn btn-primary px-4">Enviar mensaje</button>
+                                </div>
+                            </form>
+                          </div>
+                        </div>
+                    </div>
+                </section>
+
+
+            </div>
         </main>
         <footer>
             <!-- place footer here -->
@@ -137,5 +281,6 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
+         <script src="script/funcion.js"></script>
     </body>
 </html>
