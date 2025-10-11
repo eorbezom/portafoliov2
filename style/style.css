@@ -249,13 +249,19 @@ ul{
         0 0 120px rgba(0,0,0,0.85);              
                    
 }
-/*PROYECTOS*/
-.proyect { 
-    background: radial-gradient(
+/*PROYECTOS
+
+
+background: radial-gradient(
         circle,
-        rgba(0, 0, 0, 0.95) 30%,  
+        rgba(0, 0, 0, 0.95) 10%,  
         rgba(0, 0, 0, 0.88) 100%  
-    );   
+    ); 
+
+
+*/
+.proyect { 
+      background-color: rgb(14, 12, 12);
     width: 100%;              
     min-height: 100vh;      
     padding: 40px 20px;
@@ -382,93 +388,46 @@ ul{
 
 
 
-.seccion-comentarios {
-  text-align: center;
-  padding: 50px 0;
-  background-color: #f1fdfd;
-}
-
-.seccion-comentarios h2 {
-  font-size: 2rem;
-  margin-bottom: 40px;
-  color: #333;
-}
-
-/* Contenedor general del carrusel */
-.carousel-container {
-  position: relative;
-  width: 80%;
-  margin: 0 auto;
-  overflow: hidden;
-  background-color: #e5fcfc;
-  border-radius: 15px;
-  padding: 20px 0;
-}
-
-/* Zona de los comentarios */
-.carousel-slide {
-  display: flex;
+.testimonio {
+  width: 80%;                 
+  margin: 0 auto;             
+  display: flex;              
   justify-content: center;
   align-items: center;
-  transition: transform 0.8s ease-in-out;
+  height: 100vh;              
+  background-color: transparent; 
 }
 
-/* Cada comentario */
-.comentario {
-  flex: 0 0 33.33%;
-  text-align: center;
-  opacity: 0.5;
-  transform: scale(0.8);
-  transition: transform 0.5s, opacity 0.5s;
-  padding: 20px;
-  box-sizing: border-box;
+/* Carrusel */
+.carousel {
+  width: 100%;               
+  background-color: transparent;
 }
 
-.comentario img {
-  width: 140px;
-  height: 140px;
-  border-radius: 2%;
-  object-fit: cover;
-  margin-bottom: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+/* Imágenes */
+.img-carrusel {
+  width: 40%;                
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  border-radius: 15px;      
+  object-fit: contain;       
+  background-color: transparent;
+}
+.carousel-inner h5, .carousel-inner p {
+  color: rgb(197, 28, 28);              
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
 }
 
-.comentario h5 {
-  margin-top: 10px;
-  color: #007b83;
+.carousel-inner, 
+.carousel-item {
+  background-color: transparent !important;
 }
 
-/* Comentario principal (centrado) */
-.comentario.active {
-  transform: scale(1.2);
-  opacity: 1;
+
+.contacto{
+    background-color: black;
 }
-
-/* Flechas */
-.btn-prev,
-.btn-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.3);
-  border: none;
-  color: white;
-  font-size: 2rem;
-  border-radius: 10%;
-  padding: 8px 15px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  z-index: 10;
-}
-
-.btn-prev:hover,
-.btn-next:hover {
-  background-color: rgba(0,0,0,0.6);
-}
-
-.btn-prev { left: 10px; }
-.btn-next { right: 10px; }
-
 
 /*
 Responsive
